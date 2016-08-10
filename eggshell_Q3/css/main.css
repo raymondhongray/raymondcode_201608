@@ -5,18 +5,18 @@
     body, header, #nav-menu, .loading-effect, .loading-effect-opacity {
         width: 640px;
     }
-    #nav-hamburger {
-        margin-left: 50px;
-    }
+    /*#nav-hamburger {
+        margin-left: 75px;
+    }*/
 }
 
 @media not all and (min-width: 641px) {
     body, header, #nav-menu, .loading-effect, .loading-effect-opacity {
         width: 100%;
     }
-    #nav-hamburger {
+    /*#nav-hamburger {
         right: 55px;
-    }
+    }*/
 }
 
 html {
@@ -75,7 +75,7 @@ header {
 .nav-menu-wrapper {
     position: absolute;
     top: 0;
-    left: 100%;
+    left: -100%;
     width: 60%;
     height: 100%;
     background: #ffbf00;
@@ -86,10 +86,7 @@ header {
 }
 
 .nav-menu-wrapper.active {
-    -webkit-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    -o-transform: translateX(-100%);
-    transform: translateX(-100%);
+    left: 0%;
 }
 
 
@@ -98,9 +95,10 @@ header {
 #nav-hamburger {
     position: fixed;
     top: 40px;
-    z-index: 1000;
     width: 50px;
     height: 45px;
+    margin-left: 55px;
+    z-index: 1000;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
