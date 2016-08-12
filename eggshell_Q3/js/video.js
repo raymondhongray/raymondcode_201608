@@ -1,6 +1,6 @@
 function videoPopup(videoId) {
 
-    $('#youtube-iframe').attr('src', 'http://www.youtube.com/embed/' + videoId + '?rel=0&autoplay=1');
+    $('#youtube-iframe').attr('src', 'https://www.youtube.com/embed/' + videoId + '?rel=0&autoplay=1');
     $('.popup-video').css('display', 'block');
 }
 
