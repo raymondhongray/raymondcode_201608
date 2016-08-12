@@ -9,3 +9,49 @@ header {
 .container {
     margin-top: 75px;
 }
+
+.v-thumbnail {
+	position: relative;
+    width: 75%;
+    margin: 10px auto;
+}
+
+.v-thumbnail > img {
+	width: 100%;
+}
+
+.v-thumbnail > .player-btn {
+	position: absolute;
+	background: #D71616;
+	width: 50px;
+	height: 50px;
+	top: 40%;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	border-radius: 99em;
+}
+
+.v-thumbnail > .player-btn:hover {
+	opacity: 0.7;
+}
+
+.v-thumbnail > .player-btn > svg {
+	position: absolute;
+	top: 14px;
+    left: 16px;
+    width: 45%;
+}
+
+.v-thumbnail > .player-btn > svg {
+	position: absolute;
+	top: 13px;
+    left: 16px;
+    width: 45%;
+}
+
+.v-thumbnail > .player-btn > svg > polygon {
+	fill: #fff;
+}

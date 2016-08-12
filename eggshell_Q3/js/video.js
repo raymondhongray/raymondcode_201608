@@ -6,11 +6,13 @@ function videoPopup(videoId) {
 
 $(document).ready(function() {
 
-    var videoId = 'hWhFgcOMioQ';
-    videoPopup(videoId);
-
     $('.popup-video-close').click(function() {
         $('#youtube-iframe').attr('src', '');
         $('.popup-video').css('display', 'none');
+    });
+
+    $('#thumbnail-0').click(function() {
+        var videoId = 'hWhFgcOMioQ';
+        videoPopup(videoId);
     });
 });
