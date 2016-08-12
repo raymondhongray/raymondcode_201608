@@ -2,7 +2,13 @@
     body {
         margin: auto;
     }
-    body, header, #nav-menu, .loading-effect, .loading-effect-opacity {
+    body,
+    header,
+    #nav-menu,
+    .loading-effect,
+    .loading-effect-opacity,
+    .popup-video,
+    .popup-video-opacity {
         width: 640px;
     }
     /*#nav-hamburger {
@@ -11,7 +17,13 @@
 }
 
 @media not all and (min-width: 641px) {
-    body, header, #nav-menu, .loading-effect, .loading-effect-opacity {
+    body,
+    header,
+    #nav-menu,
+    .loading-effect,
+    .loading-effect-opacity,
+    .popup-video,
+    .popup-video-opacity {
         width: 100%;
     }
     /*#nav-hamburger {
@@ -182,9 +194,85 @@ header {
 
 .loading-effect-opacity {
     border: 1px groove #eee;
-    position: fixed;
+    position: absolute;
     /*width: 100%;*/
     height: 100%;
     background: #fff;
     top: 0;
+}
+
+.popup-video {
+    display: none;
+    /*width: 100%;*/
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9990;
+}
+
+.popup-video-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    border-radius: 99em;
+    cursor: pointer;
+    z-index: 200;
+}
+
+.popup-video-close:hover {
+    opacity: 0.7;
+}
+
+.popup-video-close:before,
+.popup-video-close:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 47%;
+    width: 3px;
+    height: 25px;
+    background: #000;
+    border-radius: 99em;
+    opacity: 0.7;
+}
+
+.popup-video-close:before {
+    transform: rotate(45deg);
+}
+
+.popup-video-close:after {
+    transform: rotate(-45deg);
+}
+
+.popup-video-box {
+    position: relative;
+    width: 100%;
+    height: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding-bottom: 56.25%;
+    z-index: 100;
+}
+
+#youtube-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.popup-video-opacity {
+    position: absolute;
+    /*width: 100%;*/
+    height: 100%;
+    top: 0;
+    background: #000;
+    opacity: 0.9;
 }
