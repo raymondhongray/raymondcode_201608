@@ -47,7 +47,7 @@ $(document).ready(function() {
             };
 
             var appId = '567431166777829';
-            var redirect_uri = encodeURI(window.location.protocol + '//' + window.location.hostname + window.location.pathname);
+            var redirect_uri = encodeURI(window.location.protocol + '//' + window.location.hostname + window.location.pathname + '?share_done=1');
 
             var permissionUrl = "https://m.facebook.com/dialog/feed?app_id=" + appId + "&display=touch&redirect_uri=" + redirect_uri + "&name=" + publish.name + "&description=" + publish.description + "&link=" + publish.link + "&picture=" + publish.picture;
             window.location = permissionUrl;
