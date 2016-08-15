@@ -32,7 +32,7 @@ $(window).load(function() {
     $('.loading-effect').fadeOut('slow');
 
     //為了所有臉書分享重導後的成功訊息
-    if (getQueryStrByName('share_done') !== null && getQueryStrByName('share_done') !== '') {
+    if (getQueryStrByName('post_id') !== null) {
         setTimeout(function(){ 
             alert('臉書分享成功');
         }, 1500);

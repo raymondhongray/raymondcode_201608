@@ -38,20 +38,37 @@ $(document).ready(function() {
 
             description = description + ' (' + window.location.protocol + '//' + window.location.hostname + window.location.pathname + ')';
 
-            var publish = {
-                name: title,
-                method: 'feed',
-                link: encodeURIComponent(share_link),
-                description: description,
-                picture: picture
-            };
+            if (navigator.userAgent.match(/FBAV|FBAN|FB_IAB|FB4A/i) && /Android/i.test(navigator.userAgent)) {
+                // for FB browser
+                // 不用登入，因為已經在臉書瀏覽器了
+                FB.ui({
+                    method: 'feed',
+                    display: 'touch',
+                    name: title,
+                    link: encodeURIComponent(share_link),
+                    description: description,
+                    picture: picture,
+                }, function(response) {
+                    window.location.href = window.location.protocol + '//' + window.location.hostname + window.location.pathname;
+                });
+                return;
 
-            var appId = '567431166777829';
-            var redirect_uri = encodeURI(window.location.protocol + '//' + window.location.hostname + window.location.pathname + '?share_done=1');
+            } else {
+                // 一般手機瀏覽器用重導方式實作分享
+                var publish = {
+                    name: title,
+                    method: 'feed',
+                    link: encodeURIComponent(share_link),
+                    description: description,
+                    picture: picture
+                };
 
-            var permissionUrl = "https://m.facebook.com/dialog/feed?app_id=" + appId + "&display=touch&redirect_uri=" + redirect_uri + "&name=" + publish.name + "&description=" + publish.description + "&link=" + publish.link + "&picture=" + publish.picture;
-            window.location = permissionUrl;
+                var appId = '567431166777829';
+                var redirect_uri = encodeURI(window.location.protocol + '//' + window.location.hostname + window.location.pathname + '?share_done=1');
 
+                var permissionUrl = "https://m.facebook.com/dialog/feed?app_id=" + appId + "&display=touch&redirect_uri=" + redirect_uri + "&name=" + publish.name + "&description=" + publish.description + "&link=" + publish.link + "&picture=" + publish.picture;
+                window.location = permissionUrl;
+            }
         });
     });
 });
