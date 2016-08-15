@@ -21,8 +21,8 @@ $(document).ready(function() {
         $('.popup-video').css('display', 'none');
     });
 
-    $('#thumbnail-0 > img, #thumbnail-0 > .player-btn').click(function() {
-        var videoId = 'hWhFgcOMioQ';
+    $('.v-thumbnail > img, .v-thumbnail > .player-btn').click(function() {
+        var videoId = $(this).parent().attr('vid');
         videoPopup(videoId);
     });
 
