@@ -42,9 +42,14 @@ body {
 header {
     position: fixed;
     top: 0;
-    height: 100px;
-    background: #ff9933;
+    /*height: 100px;*/
+    /*background-color: #ff9933;*/
+    background-color: transparent;
     z-index: 1000;
+}
+
+header > img {
+    width: 100%;
 }
 
 .wrap {
@@ -62,7 +67,7 @@ header {
     position: relative;
     width: 100%;
     background: #eee;
-    margin-top: 100px;
+    /*margin-top: 100px;*/
 }
 
 .increase-height-element {
