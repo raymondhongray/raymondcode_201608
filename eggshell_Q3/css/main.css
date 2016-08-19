@@ -6,14 +6,12 @@
     header,
     #nav-menu,
     .loading-effect,
-    .loading-effect-opacity,
-    .popup-video,
-    .popup-video-opacity {
+    .loading-effect-opacity {
         width: 640px;
     }
-    /*#nav-hamburger {
-        margin-left: 75px;
-    }*/
+    .container {
+        top: 105px;
+    }
 }
 
 @media not all and (min-width: 641px) {
@@ -21,14 +19,12 @@
     header,
     #nav-menu,
     .loading-effect,
-    .loading-effect-opacity,
-    .popup-video,
-    .popup-video-opacity {
+    .loading-effect-opacity {
         width: 100%;
     }
-    /*#nav-hamburger {
-        right: 55px;
-    }*/
+    .container {
+        top: 70px;
+    }
 }
 
 html {
@@ -67,7 +63,6 @@ header > img {
     position: relative;
     width: 100%;
     background: #eee;
-    top: 85px;
 }
 
 .increase-height-element {
@@ -116,10 +111,10 @@ header > img {
 
 #nav-hamburger {
     position: fixed;
-    top: 40px;
-    width: 50px;
+    top: 25px;
+    width: 65px;
     height: 45px;
-    margin-left: 55px;
+    margin-left: 45px;
     z-index: 1000;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -136,9 +131,9 @@ header > img {
 #nav-hamburger span {
     display: block;
     position: absolute;
-    height: 3px;
+    height: 6px;
     width: 100%;
-    background: #d3531a;
+    background: #fff;
     border-radius: 9px;
     opacity: 1;
     left: 0;
@@ -166,6 +161,8 @@ header > img {
 
 #nav-hamburger.active span:nth-child(1) {
     top: 18px;
+    width: 50px;
+    height: 3px;
     -webkit-transform: rotate(135deg);
     -moz-transform: rotate(135deg);
     -o-transform: rotate(135deg);
@@ -175,10 +172,14 @@ header > img {
 #nav-hamburger.active span:nth-child(2) {
     opacity: 0;
     left: -60px;
+    width: 50px;
+    height: 3px;
 }
 
 #nav-hamburger.active span:nth-child(3) {
     top: 18px;
+    width: 50px;
+    height: 3px;
     -webkit-transform: rotate(-135deg);
     -moz-transform: rotate(-135deg);
     -o-transform: rotate(-135deg);
@@ -210,80 +211,4 @@ header > img {
     height: 100%;
     background: #fff;
     top: 0;
-}
-
-.popup-video {
-    display: none;
-    /*width: 100%;*/
-    height: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 9990;
-}
-
-.popup-video-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 35px;
-    height: 35px;
-    background: #fff;
-    border-radius: 99em;
-    cursor: pointer;
-    z-index: 200;
-}
-
-.popup-video-close:hover {
-    opacity: 0.7;
-}
-
-.popup-video-close:before,
-.popup-video-close:after {
-    content: '';
-    position: absolute;
-    top: 5px;
-    left: 47%;
-    width: 3px;
-    height: 25px;
-    background: #000;
-    border-radius: 99em;
-    opacity: 0.7;
-}
-
-.popup-video-close:before {
-    transform: rotate(45deg);
-}
-
-.popup-video-close:after {
-    transform: rotate(-45deg);
-}
-
-.popup-video-box {
-    position: relative;
-    width: 100%;
-    height: 0;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    padding-bottom: 56.25%;
-    z-index: 100;
-}
-
-#youtube-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.popup-video-opacity {
-    position: absolute;
-    /*width: 100%;*/
-    height: 100%;
-    top: 0;
-    background: #000;
-    opacity: 0.9;
 }

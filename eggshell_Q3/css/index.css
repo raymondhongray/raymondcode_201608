@@ -1,3 +1,9 @@
-img.index-bg01 {
-	width: 100%;
+.youtube-video-ctrl {
+	/*display: none;*/
+}
+
+img.index-bg01,
+img.index-video {
+    width: 100%;
+    margin-top: -4px; 
 }

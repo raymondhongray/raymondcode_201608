@@ -19,6 +19,7 @@
     <link href="css/reset.css" rel="stylesheet" type="text/css" />
     <link href="css/main.css" rel="stylesheet" type="text/css" />
     <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="css/video.css" rel="stylesheet" type="text/css" />
     <script>
     // (function(i, s, o, g, r, a, m) {
     //     i['GoogleAnalyticsObject'] = r;
@@ -40,9 +41,50 @@
 </head>
 
 <body>
+    <script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId: '567431166777829',
+            xfbml: true,
+            version: 'v2.6'
+        });
+
+        fbApiInit = true; //init flag
+    };
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script id="fe-plugin">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        var host = ('https:' == document.location.protocol ? 'https://s3.amazonaws.com/widget.fever38.com' : 'http://widget.fever38.com');
+        js.src = host + "/fever-sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'fever-jssdk'));
+    </script>
     <div class="loading-effect">
         <img class="loading-effect-pic" src="img/main/load.gif" />
         <div class="loading-effect-opacity"></div>
+    </div>
+    <div class="popup-video">
+        <div class="popup-video-close"></div>
+        <div class="popup-video-box">
+            <iframe id="youtube-iframe" type="text/html" src="" frameborder="0">
+            </iframe>
+        </div>
+        <div class="popup-video-opacity"></div>
     </div>
     <!-- 這部分是header和menu共用的部分 -->
     <header>
@@ -59,14 +101,50 @@
         <span></span>
         <span></span>
     </div>
+    <div class="youtube-video-ctrl">
+        <!-- youTube 影片0 -->
+        <div id="thumbnail-0" class="v-thumbnail" vid="hWhFgcOMioQ">
+            <img src="https://img.youtube.com/vi/hWhFgcOMioQ/0.jpg">
+            <div class="player-btn">
+                <svg viewBox="0 0 20 20" preserveAspectRatio="xMidYMid" tabindex="-1">
+                    <polygon points="1,0 20,10 1,20"></polygon>
+                </svg>
+            </div>
+            <div class="fb-share-btn" v-title="洗沐影片0" v-share-link="https://www.youtube.com/watch?v=hWhFgcOMioQ" v-description="洗沐影片_介紹0" youtube-thumbnail-src="https://img.youtube.com/vi/hWhFgcOMioQ/0.jpg">
+                <p>臉書分享</p>
+            </div>
+        </div>
+        <!-- youTube 影片1 -->
+        <div id="thumbnail-1" class="v-thumbnail" vid="ztvMwmPaByg">
+            <img src="https://img.youtube.com/vi/ztvMwmPaByg/0.jpg">
+            <div class="player-btn">
+                <svg viewBox="0 0 20 20" preserveAspectRatio="xMidYMid" tabindex="-1">
+                    <polygon points="1,0 20,10 1,20"></polygon>
+                </svg>
+            </div>
+            <div class="fb-share-btn" v-title="洗沐影片1" v-share-link="https://www.youtube.com/watch?v=ztvMwmPaByg" v-description="洗沐影片_介紹1" youtube-thumbnail-src="https://img.youtube.com/vi/ztvMwmPaByg/0.jpg">
+                <p>臉書分享</p>
+            </div>
+        </div>
+    </div>
     <div class="wrap">
         <div class="container">
             <img class="index-bg01" src="img/index/index_bg01.png" />
+            <img class="index-video" data-id="0" src="img/index/index_video_0.png" />
+            <img class="index-video" data-id="1" src="img/index/index_video_1.png" />
+            <div class="show-videos">
+                <div class="fe-root fe-111335" data-domain="www.fever38.com" data-ptype="works" data-promoid="111335" data-sponsorid="16296" data-scheme="0" data-width="640" data-uri="m.fever38.com" data-hasFrameBorder="1"></div>
+            </div>
+            <div class="upload-video-link">
+                <div class="fe-root fe-111335" data-domain="www.fever38.com" data-ptype="join" data-promoid="111335" data-sponsorid="16296" data-scheme="0" data-width="640" data-uri="m.fever38.com" data-hasFrameBorder="0"></div>
+            </div>
         </div>
     </div>
     <script src="js/libs/GA.pageview.js"></script>
     <script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/video.js"></script>
 </body>
 
 </html>
