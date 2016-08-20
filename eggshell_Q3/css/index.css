@@ -1,5 +1,5 @@
 .youtube-video-ctrl {
-    /*display: none;*/
+    display: none;
 }
 
 img.index-bg01,
@@ -10,8 +10,4 @@ img.index-video {
 
 img.index-video {
     cursor: pointer;
-}
-
-.youtube-video-ctrl {
-    display: none;
 }
