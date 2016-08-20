@@ -1,9 +1,17 @@
 .youtube-video-ctrl {
-	/*display: none;*/
+    /*display: none;*/
 }
 
 img.index-bg01,
 img.index-video {
     width: 100%;
-    margin-top: -4px; 
+    margin-top: -4px;
+}
+
+img.index-video {
+    cursor: pointer;
+}
+
+.youtube-video-ctrl {
+    display: none;
 }

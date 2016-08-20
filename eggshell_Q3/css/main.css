@@ -12,6 +12,9 @@
     .container {
         top: 105px;
     }
+    #nav-hamburger {
+        top: 45px;
+    }
 }
 
 @media not all and (min-width: 641px) {
@@ -24,6 +27,9 @@
     }
     .container {
         top: 70px;
+    }
+    #nav-hamburger {
+        top: 25px;
     }
 }
 
@@ -111,7 +117,7 @@ header > img {
 
 #nav-hamburger {
     position: fixed;
-    top: 25px;
+    /*top: 25px;*/
     width: 65px;
     height: 45px;
     margin-left: 45px;
