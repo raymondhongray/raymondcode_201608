@@ -1,7 +1,13 @@
-function videoPopup(videoId) {
+function videoPopup(videoId, targetObj) {
 
     $('#youtube-iframe').attr('src', 'https://www.youtube.com/embed/' + videoId + '?rel=0&autoplay=1');
     $('.popup-video').css('display', 'block');
+
+    $('.popup-video-share').click(function(event) {
+        event.stopPropagation();
+        console.log('in');
+        targetObj.find('.fb-share-btn').click();
+    });
 }
 
 function fbEnsureInit(callback) {
@@ -23,7 +29,7 @@ $(document).ready(function() {
 
     $('.v-thumbnail > img, .v-thumbnail > .player-btn').click(function() {
         var videoId = $(this).parent().attr('vid');
-        videoPopup(videoId);
+        videoPopup(videoId, $(this).parent());
     });
 
     fbEnsureInit(function() {
