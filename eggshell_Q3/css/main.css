@@ -50,7 +50,8 @@ header {
     z-index: 1000;
 }
 
-header > img {
+header > img,
+footer > img {
     width: 100%;
 }
 

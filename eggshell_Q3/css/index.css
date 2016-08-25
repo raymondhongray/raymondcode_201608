@@ -4,9 +4,9 @@
     img.index-video,
     img.step-text,
     img.upload-link-btn,
-    img.title-03 {
-        margin: auto;
-        display: block;
+    img.title-03,
+    img.title-04,
+    img.title-06 {
         width: 75%;
     }
     .participate {
@@ -18,18 +18,20 @@
     img.index-bg01,
     img.title-02,
     img.index-video,
-    img.title-03 {
-        width: 100%;
-    }
     img.step-text,
-    img.upload-link-btn {
-        margin: auto;
-        display: block;
-        width: 90%;
+    img.upload-link-btn,
+    img.title-03,
+    img.title-04,
+    img.title-06 {
+        width: 87%;
     }
     .participate {
         right: 8px;
     }
+}
+
+.highlight.orange {
+    color: #ff9933;
 }
 
 .youtube-video-ctrl {
@@ -45,10 +47,31 @@
 .green-line {
     position: relative;
     width: 90%;
-    height: 2px;
+    height: 1px;
     margin: auto;
     background: #ADCA5B;
     border-radius: 10px;
+    display: block;
+}
+
+.show-videos,
+.upload-video-link {
+    position: relative;
+    margin: auto;
+    border: 1px solid #1fa9d6;
+    border-radius: 2px;
+    width: 95%;
+}
+
+img.index-bg01,
+img.title-02,
+img.index-video,
+img.step-text,
+img.upload-link-btn,
+img.title-03,
+img.title-04,
+img.title-06 {
+    margin: auto;
     display: block;
 }
 
@@ -57,6 +80,7 @@ img.title-02 {
 }
 
 img.step-text {
+    margin-top: 25px;
     margin-bottom: 20px;
 }
 
@@ -71,7 +95,7 @@ img.title-03 {
 .slides-btn-area {
     position: relative;
     width: 100%;
-    height: 150px;
+    height: 105px;
     margin-top: -35px;
 }
 
@@ -117,9 +141,104 @@ img.title-03 {
     width: 45%;
 }
 
+.activity-rule {
+    position: relative;
+    margin: 25px auto;
+    display: block;
+}
+
+.activity-rule > .drop-down-btn {
+    position: relative;
+    margin: auto;
+    display: block;
+    width: 87%;
+    height: 45px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    background: #fff;
+    border: 2px solid #ADCA5B;
+    cursor: pointer;
+}
+
+.activity-rule > .drop-down-btn.active {
+    background: #ADCA5B;
+    border: 0;
+}
+
+.activity-rule > .drop-down-btn > p {
+    position: relative;
+    right: 30px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 45px;
+    color: #ff9933;
+}
+
+.activity-rule > .drop-down-btn.active > p {
+    color: #fff;
+}
+
+.activity-rule > .drop-down-btn > .ic-btn {
+    position: absolute;
+    top: 10px;
+    left: 18px;
+}
+
+.activity-rule > .drop-down-content {
+    position: relative;
+    margin: auto;
+    width: 87%;
+    height: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    /*background: #ff9933;*/
+    color: #666;
+    line-height: 25px;
+    display: none;
+}
+
+.activity-rule > .drop-down-content.open {
+    display: block;
+}
+
+.activity-rule > .drop-down-content > .e-title {
+    margin-top: 8px;
+    color: #333;
+}
+
+.activity-rule > .drop-down-content > .e-content {
+    position: relative;
+    width: 95%;
+    left: 5%;
+    font-size: 15px;
+}
+
+.activity-rule > .drop-down-content > .e-title > .s-index {
+    position: relative;
+    width: 13%;
+    font-size: 15px;
+    display: inline-block;
+}
+
+.activity-rule > .drop-down-content > .e-title > .s-index.small-size {
+	font-size: 12px;
+}
+
+.activity-rule > .drop-down-content > .e-title > .s-text {
+    position: relative;
+    width: 85%;
+    font-size: 15px;
+    display: inline-block;
+    vertical-align: top;
+}
+
 .participate {
     position: fixed;
-    top: 70%;
+    /*top: 70%;*/
+    bottom: 0;
     width: 75px;
     z-index: 10;
 }
