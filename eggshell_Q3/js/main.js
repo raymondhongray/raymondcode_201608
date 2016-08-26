@@ -8,6 +8,14 @@ function getQueryStrByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+function move_to(target_obj, offset) {
+    
+    var scroll_offset = target_obj.offset().top + offset;
+    $('html, body').animate({
+        scrollTop: scroll_offset
+    }, 500);
+}
+
 $(document).ready(function() {
 
     $('#nav-hamburger').click(function() {
@@ -26,6 +34,10 @@ $(document).ready(function() {
         $('#nav-menu').css('display', 'none');
         $('#nav-hamburger, #nav-menu > .nav-menu-wrapper').toggleClass('active');
     });
+
+    $('.menu-icon').click(function() {
+        $('#nav-hamburger').click();
+    });
 });
 
 $(window).load(function() {
@@ -33,7 +45,7 @@ $(window).load(function() {
 
     //為了所有臉書分享重導後的成功訊息
     if (getQueryStrByName('post_id') !== null) {
-        setTimeout(function(){ 
+        setTimeout(function() {
             alert('臉書分享成功');
         }, 1500);
     }

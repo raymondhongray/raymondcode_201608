@@ -87,6 +87,17 @@
         </div>
         <div class="popup-video-opacity"></div>
     </div>
+    <div class="popup-award">
+        <div class="popup-award-close"></div>
+        <div class="popup-award-pic">
+            <div style="width: 100%;height: 35px;"></div>
+            <img src="img/index/award_title.png" />
+            <div style="width: 100%;height: 35px;"></div>
+            <p>活動將於 2016/10/21 開獎!</p>
+            <p>謝謝您的耐心等候唷~</p>
+        </div>
+        <div class="popup-award-opacity"></div>
+    </div>
     <!-- 這部分是header和menu共用的部分 -->
     <header>
         <img src="img/main/header.png" />
@@ -95,6 +106,34 @@
         <div class="nav-menu-opacity">
         </div>
         <div class="nav-menu-wrapper">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html"><img class="menu-icon" src="img/menu/menu_01.png"></a>
+                    </li>
+                    <li>
+                        <a href="index.html#menu-02"><img class="menu-icon" src="img/menu/menu_02.png"></a>
+                    </li>
+                    <li>
+                        <a href="index.html#menu-03"><img class="menu-icon" src="img/menu/menu_03.png"></a>
+                    </li>
+                    <li>
+                        <a href="index.html#menu-04"><img class="menu-icon" src="img/menu/menu_04.png"></a>
+                    </li>
+                    <li>
+                        <a href="index.html#menu-05"><img class="menu-icon" src="img/menu/menu_05.png"></a>
+                    </li>
+                    <li>
+                        <a href="index.html#menu-06"><img class="menu-icon" src="img/menu/menu_06.png"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img class="menu-icon" src="img/menu/menu_07.png" onclick="$('.popup-award').css('display', 'block');"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.maobao2.com.tw/eggshell"><img class="menu-icon" src="img/menu/menu_08.png"></a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </nav>
     <div id="nav-hamburger">
@@ -128,40 +167,28 @@
             </div>
         </div>
     </div>
-    <div id="participate" class="participate">
-        <img src="img/index/event_btn_A.png">
+    <div id="participate" class="participate how-to">
+        <img src="img/index/event_btn_A.gif">
     </div>
     <div class="wrap">
         <div class="container">
             <img class="index-bg01" src="img/index/cut01/index_bg01.png" />
             <div class="green-line" style="margin-top: 25px;margin-bottom: 25px;"></div>
-            <img class="title-02" src="img/index/cut02/title02.png" />
+            <img id="menu-02" class="title-02" src="img/index/cut02/title02.png" />
             <img class="index-video" data-id="0" src="img/index/cut02/index_video_0.png" />
             <img class="index-video" data-id="1" src="img/index/cut02/index_video_1.png" />
             <img class="step-text" src="img/index/cut02/step_text.png" />
             <img class="upload-link-btn" src="img/index/cut02/upload_link_btn.png" />
             <div class="green-line" style="margin-top: 25px;margin-bottom: 25px;"></div>
-            <img class="title-03" src="img/index/cut03/title03.png" />
+            <img id="menu-03" class="title-03" src="img/index/cut03/title03.png" />
             <div class="flexslider">
                 <ul class="slides">
                     <li>
-                        <img class="index-video" data-id="0" src="img/index/cut02/index_video_0.png" />
+                        <img class="index-video" data-id="0" src="img/index/cut03/EX03.png" />
                     </li>
                     <li>
-                        <img class="index-video" data-id="1" src="img/index/cut02/index_video_1.png" />
+                        <img class="index-video" data-id="1" src="img/index/cut03/EX04.png" />
                     </li>
-                    <!-- <li>
-                        <img src="img/index/award_video_0.png" />
-                    </li>
-                    <li>
-                        <img src="img/index/award_video_1.png" />
-                    </li>
-                    <li>
-                        <img src="img/index/award_video_2.png" />
-                    </li>
-                    <li>
-                        <img src="img/index/award_video_3.png" />
-                    </li> -->
                 </ul>
             </div>
             <div class="slides-btn-area">
@@ -183,15 +210,28 @@
                 </div>
             </div>
             <div class="green-line" style="margin-bottom: 20px;"></div>
-            <img class="title-04" src="img/index/cut04/title04.png" />
-            <div class="show-videos">
-                <div class="fe-root fe-111335" data-domain="www.fever38.com" data-ptype="works" data-promoid="111335" data-sponsorid="16296" data-scheme="0" data-width="640" data-uri="m.fever38.com" data-hasFrameBorder="1"></div>
-            </div>
-            <div class="upload-video-link">
-                <div class="fe-root fe-111335" data-domain="www.fever38.com" data-ptype="join" data-promoid="111335" data-sponsorid="16296" data-scheme="0" data-width="640" data-uri="m.fever38.com" data-hasFrameBorder="0"></div>
+            <img class="title-04" style="margin-bottom: 25px" src="img/index/cut04/title04.png" />
+            <div class="fever38-plugin">
+                <div class="title-text-04">
+                    <p>TOP3寶貝人氣王可獲得</p>
+                    <p>快找親朋好友幫你家寶貝集氣吧!</p>
+                </div>
+                <img class="bubble" style="top: 90px;right: 8px;width: 25px;" src="img/index/cut04/bb01.png" />
+                <img class="bubble" style="top: 320px;left: 10px;width: 30px;" src="img/index/cut04/bb02.png" />
+                <img class="bubble" style="top: 400px;right: 00px;width: 30px;" src="img/index/cut04/bb03.png" />
+                <div id="menu-04" class="show-videos">
+                    <div class="fe-root fe-111335" data-domain="www.fever38.com" data-ptype="works" data-promoid="111335" data-sponsorid="16296" data-scheme="0" data-width="640" data-uri="m.fever38.com" data-hasFrameBorder="1"></div>
+                </div>
+                <div id="menu-05" class="upload-video-link">
+                    <div class="fe-root fe-111335" data-domain="www.fever38.com" data-ptype="join" data-promoid="111335" data-sponsorid="16296" data-scheme="0" data-width="640" data-uri="m.fever38.com" data-hasFrameBorder="0"></div>
+                </div>
             </div>
             <div class="green-line" style="margin-top: 20px;margin-bottom: 20px;"></div>
-            <img class="title-06" src="img/index/cut06/title06.png" />
+            <img id="product-intro" class="title-05" src="img/index/cut05/title05.png" />
+            <img class="cut05-product" src="img/index/cut05/product_01.png" />
+            <img class="cut05-product" src="img/index/cut05/product_02.png" />
+            <div class="green-line" style="margin-top: 20px;margin-bottom: 20px;"></div>
+            <img id="menu-06" class="title-06" src="img/index/cut06/title06.png" />
             <div class="activity-rule">
                 <div class="drop-down-btn" data-id="0">
                     <object class="ic-btn" type="image/svg+xml" data="img/index/cut06/ic_add_24px.svg">
@@ -336,9 +376,11 @@
                     </p>
                     <p style="margin-top: 15px;font-size: 15px;border: 1px solid #ADCA5B;border-radius: 10px;padding: 8px;">
                         主辦單位：毛寶股份有限公司
-                        <br>產品諮詢消費者服務專線：<br>0800-266-199
+                        <br>產品諮詢消費者服務專線：
+                        <br>0800-266-199
                         <br>活動相關問題請洽承辦單位：
-                        <br>穿透力創意行銷科技有限公司<br>(02)27068890#106
+                        <br>穿透力創意行銷科技有限公司
+                        <br>(02)27068890#106
                     </p>
                 </div>
             </div>
