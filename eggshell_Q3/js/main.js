@@ -22,8 +22,10 @@ $(document).ready(function() {
 
         if ($(this).hasClass('active')) {
             $('#nav-menu').css('display', 'none');
+            $('.notice-sign').fadeIn(500);
         } else {
             $('#nav-menu').css('display', 'block');
+            $('.notice-sign').fadeOut(200);
         }
 
         $('#nav-hamburger').toggleClass('active');

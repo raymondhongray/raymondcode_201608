@@ -129,6 +129,10 @@
     color: #ff9933;
 }
 
+.highlight.bold {
+    font-weight: bold;
+}
+
 .youtube-video-ctrl {
     display: none;
 }
@@ -181,16 +185,6 @@
 .show-videos {
     margin-top: 25px;
 }
-
-
-/*.show-videos,
-.upload-video-link {
-    position: relative;
-    margin: auto;
-    border: 1px solid #1fa9d6;
-    border-radius: 2px;
-    width: 95%;
-}*/
 
 img.index-bg01,
 img.title-02,
@@ -335,42 +329,38 @@ img.title-03 {
     display: block;
 }
 
-.activity-rule > .drop-down-content > .e-title {
-    margin-top: 8px;
-    color: #333;
+.activity-rule > .drop-down-content .main-ul {
+    margin-left: 20px;
+    font-size: 16px;
 }
 
-.activity-rule > .drop-down-content > .e-content {
-    position: relative;
-    width: 95%;
-    left: 5%;
+.activity-rule > .drop-down-content .sub-ul {
+    margin-left: 25px;
     font-size: 15px;
 }
 
-.activity-rule > .drop-down-content > .e-title > .s-index {
-    position: relative;
-    width: 13%;
-    font-size: 15px;
-    display: inline-block;
+.activity-rule > .drop-down-content .sub-ul > li {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.activity-rule > .drop-down-content > .e-title > .s-index.small-size {
-    font-size: 12px;
-}
-
-.activity-rule > .drop-down-content > .e-title > .s-text {
-    position: relative;
-    width: 85%;
-    font-size: 15px;
-    display: inline-block;
-    vertical-align: top;
+.activity-rule > .drop-down-content .attention > li {
+	margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .participate {
     position: fixed;
     bottom: 0;
-    width: 75px;
     z-index: 10;
+}
+
+.participate.how-to, .participate.want-to {
+	width: 75px;
+}
+
+.participate.product, .participate.back-top {
+	width: 115px;
 }
 
 .participate > img {

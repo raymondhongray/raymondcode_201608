@@ -20,7 +20,7 @@ function listen_event_btn() {
     if (document.body.scrollTop >= ($('.step-text').offset().top - $('.step-text').height())) {
         if (pass_siteA) {
 
-            var img_src = 'img/index/event_btn_B.gif';
+            var img_src = 'img/index/want01.gif';
             add_active($('.participate'), img_src, 'act-hiding');
             replace_class($('.participate'), 'want-to', 'how-to');
             pass_siteA = false;
@@ -29,7 +29,7 @@ function listen_event_btn() {
             if (document.body.scrollTop >= ($('.upload-video-link').offset().top - $('.upload-video-link').height())) {
                 if (pass_siteB) {
 
-                    var img_src = 'img/index/event_btn_C.gif';
+                    var img_src = 'img/index/product.gif';
                     add_active($('.participate'), img_src, 'act-hiding');
                     replace_class($('.participate'), 'product', 'want-to');
                     pass_siteB = false;
@@ -39,7 +39,7 @@ function listen_event_btn() {
             } else {
                 if (!pass_siteB) {
 
-                    var img_src = 'img/index/event_btn_B.gif';
+                    var img_src = 'img/index/want01.gif';
                     add_active($('.participate'), img_src, 'act-hiding');
                     replace_class($('.participate'), 'want-to', 'product');
                     pass_siteB = true;
@@ -49,7 +49,7 @@ function listen_event_btn() {
     } else {
         if (!pass_siteA) {
 
-            var img_src = 'img/index/event_btn_A.gif';
+            var img_src = 'img/index/how01.gif';
             add_active($('.participate'), img_src, 'act-hiding');
             replace_class($('.participate'), 'how-to', 'want-to');
             pass_siteA = true;
@@ -66,7 +66,6 @@ $(window).load(function() {
         animation: "slide"
     });
 
-
     $('body').on('click', '.how-to', function() {
         move_to($('.step-text'), -100);
     });
@@ -81,8 +80,8 @@ $(window).load(function() {
     });
 
     $('body').on('click', '.back-top', function() {
+    	replace_class($('.participate'), 'how-to', 'back-top');
         move_to($('body'), -100);
-        replace_class($('.participate'), 'how-to', 'back-top');
     });
 });
 
@@ -108,15 +107,16 @@ $(document).ready(function() {
 
         if (is_btn_active) {
             $(this).find('.ic-btn').attr('data', 'img/index/cut06/ic_add_24px.svg');
-            $('.drop-down-content[data-id="' + data_id + '"]').css('display', 'none')
+            $('.drop-down-content[data-id="' + data_id + '"]').css('display', 'none');
         } else {
             $(this).find('.ic-btn').attr('data', 'img/index/cut06/ic_remove_24px.svg');
             $('.drop-down-content[data-id="' + data_id + '"]').css('display', 'block');
+            move_to($('.drop-down-content[data-id="' + data_id + '"]'), -($('header').height() + 75));
         }
         $(this).toggleClass('active');
     });
 
     $('.popup-award-close, .popup-award-opacity').click(function() {
-    	$('.popup-award').css('display', 'none');
+        $('.popup-award').css('display', 'none');
     });
 });
