@@ -1,5 +1,6 @@
 var pass_siteA = true;
 var pass_siteB = true;
+var pass_siteC = true;
 
 function add_active(obj, img_src, action) {
     obj.addClass(action);
@@ -35,6 +36,24 @@ function listen_event_btn() {
                     pass_siteB = false;
                 } else {
                     // 第三階段
+                    if (document.body.scrollTop >= ($('#product-intro').offset().top - $('#product-intro').height())) {
+                    	if (pass_siteC) {
+
+                    		var img_src = 'img/index/back_top.gif';
+		                    add_active($('.participate'), img_src, 'act-hiding');
+		                    replace_class($('.participate'), 'back-top', 'product');
+		                    pass_siteC = false;
+                    	} else {
+                    		// 第四階段
+                    	}
+                    } else {
+                    	if (!pass_siteC) {
+                    		var img_src = 'img/index/product.gif';
+		                    add_active($('.participate'), img_src, 'act-hiding');
+		                    replace_class($('.participate'), 'product', 'back-top');
+		                    pass_siteC = true;
+                    	}
+                    }
                 }
             } else {
                 if (!pass_siteB) {

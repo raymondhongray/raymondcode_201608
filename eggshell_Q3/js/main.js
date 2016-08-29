@@ -1,3 +1,6 @@
+var loading_value = 0;
+var img_length = $('img').length;
+
 function getQueryStrByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
@@ -37,7 +40,7 @@ $(document).ready(function() {
         $('#nav-hamburger, #nav-menu > .nav-menu-wrapper').toggleClass('active');
     });
 
-    $('.menu-icon').click(function() {
+    $('.nav-menu-wrapper img').click(function() {
         $('#nav-hamburger').click();
     });
 });
