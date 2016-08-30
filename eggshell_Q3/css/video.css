@@ -138,7 +138,8 @@ header {
     width: 35px;
     height: 35px;
     background: #fff;
-    border-radius: 99em;
+    /*border-radius: 99em;*/
+    background: #000;
     cursor: pointer;
     z-index: 200;
 }

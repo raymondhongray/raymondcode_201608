@@ -178,6 +178,7 @@
     background: #fff;
     color: #666;
     font-size: 18px;
+    font-weight: bold;
     line-height: 25px;
     text-align: center;
 }
@@ -345,7 +346,7 @@ img.title-03 {
 }
 
 .activity-rule > .drop-down-content .attention > li {
-	margin-top: 5px;
+    margin-top: 5px;
     margin-bottom: 5px;
 }
 
@@ -355,12 +356,14 @@ img.title-03 {
     z-index: 10;
 }
 
-.participate.how-to, .participate.want-to {
-	width: 75px;
+.participate.how-to,
+.participate.want-to {
+    /*width: 75px;*/
 }
 
-.participate.product, .participate.back-top {
-	width: 145px;
+.participate.product,
+.participate.back-top {
+    /*width: 145px;*/
 }
 
 .participate > img {

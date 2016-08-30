@@ -2,6 +2,7 @@ function videoPopup(videoId, targetObj) {
 
     $('#youtube-iframe').attr('src', 'https://www.youtube.com/embed/' + videoId + '?rel=0&autoplay=1');
     $('.popup-video').css('display', 'block');
+    $('body').css('overflow', 'hidden');
 
     $('.popup-video-share').click(function(event) {
         event.stopPropagation();
@@ -25,6 +26,7 @@ $(document).ready(function() {
     $('.popup-video-close').click(function() {
         $('#youtube-iframe').attr('src', '');
         $('.popup-video').css('display', 'none');
+        $('body').css('overflow', 'auto');
     });
 
     $('.v-thumbnail > img, .v-thumbnail > .player-btn').click(function() {
@@ -42,7 +44,7 @@ $(document).ready(function() {
             var description = $(this).attr('v-description');
             var picture = $(this).attr('youtube-thumbnail-src');
 
-            description = description + ' (' + window.location.protocol + '//' + window.location.hostname + window.location.pathname + ')';
+            // description = description + ' (' + window.location.protocol + '//' + window.location.hostname + window.location.pathname + ')';
 
             if (navigator.userAgent.match(/FBAV|FBAN|FB_IAB|FB4A/i) && /Android/i.test(navigator.userAgent)) {
                 // for FB browser
