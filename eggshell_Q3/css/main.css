@@ -125,8 +125,14 @@ footer > img {
 }
 
 .notice-sign > p {
+    position: relative;
     text-align: center;
     font-size: 8px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 #nav-menu {
@@ -171,6 +177,10 @@ footer > img {
 
 .nav-menu-wrapper ul {
     line-height: 3.5em;
+}
+
+.nav-menu-wrapper.active li {
+    cursor: pointer;
 }
 
 .nav-menu-wrapper.active li img {
