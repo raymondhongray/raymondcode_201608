@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <title>小鹿山丘防曬洗沐</title>
+    <title>小鹿山丘寶貝明星大募集</title>
     <meta name="keywords" content="">
-    <meta name="description" content="">
+    <meta name="description" content="上傳影片成為寶貝明星，送小鹿山丘沐浴組一年份。幫你愛的寶貝投票集氣，還可獲得加油獎。快跟凱莉哥和蘋果西打一起來參加！">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <meta name="viewport" content="width=640, user-scalable=no, maximum-scale=1.0"> -->
-    <meta property="og:title" content=">小鹿山丘防曬洗沐系列" />
+    <meta property="og:title" content="小鹿山丘寶貝明星大募集" />
     <meta property="og:image" content="" />
     <meta property="og:image" content="" />
     <meta property="og:image" content="" />
@@ -118,35 +118,34 @@
             <nav>
                 <ul class="ul-none">
                     <li>
-                        <img id="menu-back-home" src="img/menu/menu_01.png" />
+                        <img id="menu-back-home" src="img/menu/menu_01.png" onclick="ga('send', 'event', 'Menu', 'Click', '回首頁');" />
                     </li>
                     <li>
-                        <img id="menu-baby-star" src="img/menu/menu_02.png" />
+                        <img id="menu-baby-star" src="img/menu/menu_02.png" onclick="ga('send', 'event', 'Menu', 'Click', '我家有寶貝明星');" />
+                    </li>
+                    <li class="open-best-videos">
+                        <img id="menu-best-videos" src="img/menu/menu_03.png" onclick="ga('send', 'event', 'Menu', 'Click', '每週寶貝明星');" />
                     </li>
                     <li>
-                        <img id="menu-best-videos" src="img/menu/menu_03.png" />
+                        <img id="menu-vote" src="img/menu/menu_04.png" onclick="ga('send', 'event', 'Menu', 'Click', '寶貝人氣王票選');" />
                     </li>
                     <li>
-                        <img id="menu-vote" src="img/menu/menu_04.png" />
+                        <img id="menu-product" src="img/menu/menu_05.png" onclick="ga('send', 'event', 'Menu', 'Click', '開心玩樂秘訣大公開');" />
                     </li>
                     <li>
-                        <img id="menu-product" src="img/menu/menu_05.png" />
+                        <img id="menu-rules" src="img/menu/menu_06.png" onclick="ga('send', 'event', 'Menu', 'Click', '活動辦法');" />
                     </li>
                     <li>
-                        <img id="menu-rules" src="img/menu/menu_06.png" />
+                        <img id="menu-award" class="show-popup-award" src="img/menu/menu_07.png" onclick="ga('send', 'event', 'Menu', 'Click', '得獎名單');" />
                     </li>
                     <li>
-                        <img id="menu-award" class="show-popup-award" src="img/menu/menu_07.png" />
-                    </li>
-                    <li>
-                        <a href="https://www.maobao2.com.tw/eggshell" target="_blank"><img src="img/menu/menu_08.png" /></a>
+                        <a href="https://www.maobao2.com.tw/eggshell" target="_blank"><img src="img/menu/menu_08.png" onclick="ga('send', 'event', 'Menu', 'Click', 'eggshell官網');" /></a>
                     </li>
                 </ul>
             </nav>
         </div>
     </nav>
-    <div id="nav-hamburger">
-
+    <div id="nav-hamburger" onclick="ga('send', 'event', 'Menu', 'Click', 'Menu_漢堡');">
         <span></span>
         <span></span>
         <span></span>
@@ -188,41 +187,44 @@
             <img class="index-bg01" src="img/index/cut01/index_bg01.png" />
             <div class="green-line" style="margin-top: 25px;margin-bottom: 25px;"></div>
             <img id="menu-02" class="title-02" src="img/index/cut02/title02.png" />
-            <img class="index-video" data-id="0" src="img/index/cut02/index_video_0.png" />
-            <img class="index-video" data-id="1" src="img/index/cut02/index_video_1.png" />
+            <img class="index-video" data-id="0" src="img/index/cut02/index_video_0.png" onclick="ga('send', 'event', '首頁', 'Click', '不怕曬太陽影片');" />
+            <img class="index-video" data-id="1" src="img/index/cut02/index_video_1.png" onclick="ga('send', 'event', '首頁', 'Click', '洗澡最開心影片');" />
             <img class="step-text" src="img/index/cut02/step_text.png" />
-            <img class="upload-link-btn" src="img/index/cut02/upload_link_btn.gif" />
+            <img class="upload-link-btn" src="img/index/cut02/upload_link_btn.gif" onclick="ga('send', 'event', '首頁', 'Click', '立即上傳影片');" />
             <div class="green-line" style="margin-top: 25px;margin-bottom: 25px;"></div>
-            <img id="menu-03" class="title-03" src="img/index/cut03/title03.png" />
-            <div class="flexslider">
-                <ul class="slides">
-                    <li>
-                        <img class="index-video" data-id="0" src="img/index/cut03/EX03.png" />
-                    </li>
-                    <li>
-                        <img class="index-video" data-id="1" src="img/index/cut03/EX04.png" />
-                    </li>
-                </ul>
-            </div>
-            <div class="slides-btn-area">
-                <div class="slides-btn-prev">
-                    <img src="img/index/cut03/last.png" />
-                    <div class="green-slides-btn">
-                        <svg viewBox="0 0 20 20" preserveAspectRatio="xMidYMid" tabindex="-1">
-                            <polygon points="20,0 1,10 20,20" style="fill:#fff;stroke:#fff;"></polygon>
-                        </svg>
+            <div class="open-best-videos">
+                <img id="menu-03" class="title-03" src="img/index/cut03/title03.png" />
+                <div class="flexslider">
+                    <ul class="slides">
+                        <!-- 第一週影片data-id="2" 後面以此類推 -->
+                        <li>
+                            <img class="index-video" data-id="0" src="img/index/cut03/EX03.png" onclick="ga('send', 'event', '首頁', 'Click', '第一週影片播放');" />
+                        </li>
+                        <li>
+                            <img class="index-video" data-id="1" src="img/index/cut03/EX04.png" />
+                        </li>
+                    </ul>
+                </div>
+                <div class="slides-btn-area">
+                    <div class="slides-btn-prev" onclick="ga('send', 'event', '首頁', 'Click', '上一週影片鍵');">
+                        <img src="img/index/cut03/last.png" />
+                        <div class="green-slides-btn">
+                            <svg viewBox="0 0 20 20" preserveAspectRatio="xMidYMid" tabindex="-1">
+                                <polygon points="20,0 1,10 20,20" style="fill:#fff;stroke:#fff;"></polygon>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="slides-btn-next" onclick="ga('send', 'event', '首頁', 'Click', '下一週影片鍵');">
+                        <img src="img/index/cut03/next.png" />
+                        <div class="green-slides-btn">
+                            <svg viewBox="0 0 20 20" preserveAspectRatio="xMidYMid" tabindex="-1">
+                                <polygon points="1,0 20,10 1,20" style="fill:#fff;stroke:#fff;"></polygon>
+                            </svg>
+                        </div>
                     </div>
                 </div>
-                <div class="slides-btn-next">
-                    <img src="img/index/cut03/next.png" />
-                    <div class="green-slides-btn">
-                        <svg viewBox="0 0 20 20" preserveAspectRatio="xMidYMid" tabindex="-1">
-                            <polygon points="1,0 20,10 1,20" style="fill:#fff;stroke:#fff;"></polygon>
-                        </svg>
-                    </div>
-                </div>
+                <div class="green-line" style="margin-bottom: 20px;"></div>
             </div>
-            <div class="green-line" style="margin-bottom: 20px;"></div>
             <img id="menu-04" class="title-04" style="margin-bottom: 25px" src="img/index/cut04/title04.png" />
             <div class="fever38-plugin">
                 <div class="title-text-04">
@@ -241,12 +243,12 @@
             </div>
             <div class="green-line" style="margin-top: 20px;margin-bottom: 20px;"></div>
             <img id="product-intro" class="title-05" src="img/index/cut05/title05.png" />
-            <a href="https://www.maobao2.com.tw/eggshell-sunscreen.html" target="_blank"><img class="cut05-product" src="img/index/cut05/product_01.png" /></a>
-            <a href="https://www.maobao2.com.tw/eggshell-bodywash.html" target="_blank"><img class="cut05-product" src="img/index/cut05/product_02.png" /></a>
+            <a href="https://www.maobao2.com.tw/eggshell-sunscreen.html" target="_blank" onclick="ga('send', 'event', '首頁', 'Click', '不怕曬太陽_了解更多');"><img class="cut05-product" src="img/index/cut05/product_01.png" /></a>
+            <a href="https://www.maobao2.com.tw/eggshell-bodywash.html" target="_blank" onclick="ga('send', 'event', '首頁', 'Click', '洗澡最開心_了解更多');"><img class="cut05-product" src="img/index/cut05/product_02.png" /></a>
             <div class="green-line" style="margin-top: 20px;margin-bottom: 20px;"></div>
             <img id="menu-06" class="title-06" src="img/index/cut06/title06.png" />
             <div class="activity-rule">
-                <div class="drop-down-btn" data-id="0">
+                <div class="drop-down-btn" data-id="0" onclick="ga('send', 'event', '首頁', 'Click', '活動說明');">
                     <object class="ic-btn" type="image/svg+xml" data="img/index/cut06/ic_add_24px.svg">
                         Your browser does not support SVG
                     </object>
@@ -277,7 +279,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="drop-down-btn" data-id="1">
+                <div class="drop-down-btn" data-id="1" onclick="ga('send', 'event', '首頁', 'Click', '活動規則');">
                     <object class="ic-btn" type="image/svg+xml" data="img/index/cut06/ic_add_24px.svg">
                         Your browser does not support SVG
                     </object>
@@ -329,7 +331,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="drop-down-btn" data-id="2">
+                <div class="drop-down-btn" data-id="2" onclick="ga('send', 'event', '首頁', 'Click', '注意事項');">
                     <object class="ic-btn" type="image/svg+xml" data="img/index/cut06/ic_add_24px.svg">
                         Your browser does not support SVG
                     </object>

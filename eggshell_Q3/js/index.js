@@ -17,9 +17,9 @@ function replace_class(obj, target, src) {
 }
 
 function listen_event_btn() {
-
+    var pos = $(document).scrollTop();
     // 第一階段
-    if (document.body.scrollTop >= ($('.step-text').offset().top - $('.step-text').height())) {
+    if (pos >= ($('.step-text').offset().top - $('.step-text').height())) {
         if (pass_siteA) {
 
             var img_src = 'img/index/want01.gif';
@@ -28,7 +28,7 @@ function listen_event_btn() {
             pass_siteA = false;
         } else {
             // 第二階段
-            if (document.body.scrollTop >= ($('.upload-video-link').offset().top - $('.upload-video-link').height())) {
+            if (pos >= ($('.upload-video-link').offset().top - $('.upload-video-link').height())) {
                 if (pass_siteB) {
 
                     var img_src = 'img/index/product.gif';
@@ -37,7 +37,7 @@ function listen_event_btn() {
                     pass_siteB = false;
                 } else {
                     // 第三階段
-                    if (document.body.scrollTop >= ($('#product-intro').offset().top - $('#product-intro').height())) {
+                    if (pos >= ($('#product-intro').offset().top - $('#product-intro').height())) {
                         if (pass_siteC) {
 
                             var img_src = 'img/index/back_top.gif';
@@ -78,13 +78,13 @@ function listen_event_btn() {
 }
 
 function set_flexslider() {
-	$('.flexslider').flexslider({
+    $('.flexslider').flexslider({
         animation: "slide",
         slideshow: false
     });
 
-    flexsliderInterval = setInterval(function(){
-    	$('.flex-next').click();
+    flexsliderInterval = setInterval(function() {
+        $('.flex-next').click();
     }, 5000);
 
     $('.slides-btn-prev').click(function() {
@@ -102,26 +102,28 @@ $(window).load(function() {
 
     $('body').on('click', '.how-to', function() {
         move_to($('.step-text'), -100);
+        ga('send', 'event', '首頁', 'Click', '如何參加(引導鍵)');
     });
 
     $('body').on('click', '.upload-link-btn, .want-to', function() {
         move_to($('.upload-video-link'), -100);
+        ga('send', 'event', '首頁', 'Click', '馬上參加(引導鍵)');
     });
 
     $('body').on('click', '.product', function() {
         move_to($('#product-intro'), -100);
-        replace_class($('.participate'), 'back-top', 'product');
+        ga('send', 'event', '首頁', 'Click', '開心玩樂秘訣大公開(引導鍵)');
     });
 
     $('body').on('click', '.back-top', function() {
-        replace_class($('.participate'), 'how-to', 'back-top');
         move_to($('body'), -100);
+        ga('send', 'event', '首頁', 'Click', '回頂(引導鍵)');
     });
 });
 
 $(document).ready(function() {
 
-	set_flexslider();
+    set_flexslider();
 
     $('.index-video').click(function() {
 
