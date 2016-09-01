@@ -101,7 +101,7 @@ $(window).load(function() {
     };
 
     $('body').on('click', '.how-to', function() {
-        move_to($('.step-text'), -100);
+        move_to($('.step-text'), -75);
         ga('send', 'event', '首頁', 'Click', '如何參加(引導鍵)');
     });
 
